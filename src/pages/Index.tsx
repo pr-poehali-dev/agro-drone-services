@@ -46,6 +46,7 @@ export default function Index() {
   const [activeSection, setActiveSection] = useState('home');
   const [selectedServices, setSelectedServices] = useState<number[]>([]);
   const [area, setArea] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -55,6 +56,7 @@ export default function Index() {
 
   const scrollToSection = (section: string) => {
     setActiveSection(section);
+    setMobileMenuOpen(false);
     document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -88,6 +90,13 @@ export default function Index() {
               <Icon name="Plane" className="text-primary" size={32} />
               <span className="text-2xl font-bold text-primary">АэроВектор</span>
             </div>
+            <button
+              className="md:hidden p-2 hover:bg-green-50 rounded-lg transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Меню"
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} className="text-primary" size={28} />
+            </button>
             <div className="hidden md:flex gap-6">
               {['home', 'services', 'technology', 'calculator', 'about', 'blog', 'contacts'].map((section) => (
                 <button
@@ -108,6 +117,31 @@ export default function Index() {
               ))}
             </div>
           </div>
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 animate-fade-in">
+              <div className="flex flex-col gap-3">
+                {['home', 'services', 'technology', 'calculator', 'about', 'blog', 'contacts'].map((section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className={`text-left px-4 py-3 rounded-lg font-medium transition-colors ${
+                      activeSection === section
+                        ? 'bg-green-50 text-primary'
+                        : 'text-foreground/70 hover:bg-green-50/50 hover:text-primary'
+                    }`}
+                  >
+                    {section === 'home' && 'Главная'}
+                    {section === 'services' && 'Услуги'}
+                    {section === 'technology' && 'Технология'}
+                    {section === 'calculator' && 'Калькулятор'}
+                    {section === 'about' && 'О компании'}
+                    {section === 'blog' && 'Блог'}
+                    {section === 'contacts' && 'Контакты'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
