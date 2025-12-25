@@ -234,7 +234,7 @@ export default function Index() {
       <section id="technology" className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">Наша технология</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h3 className="text-2xl font-bold mb-6">Агродроны нового поколения</h3>
               <div className="space-y-4">
@@ -256,13 +256,83 @@ export default function Index() {
                 ))}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-12 flex items-center justify-center min-h-[400px]">
-              <div className="text-center">
-                <Icon name="Plane" className="text-primary mx-auto mb-4" size={120} />
-                <p className="text-lg font-semibold text-green-800">DJI Agras T40</p>
-                <p className="text-sm text-green-600">Флагманский агродрон</p>
-              </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
+              <img 
+                src="https://cdn.poehali.dev/projects/1791e283-84b6-474b-8c3f-45cb9d5dbfef/files/eeb08ec8-d331-422a-9e22-d300b08fc4c0.jpg" 
+                alt="DJI Agras T50 агродрон"
+                className="w-full h-auto object-contain rounded-lg"
+              />
             </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-green-100">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Icon name="Droplets" className="text-primary" size={24} />
+                  </div>
+                  DJI Agras T50
+                </CardTitle>
+                <CardDescription>Агродрон для внесения препаратов</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Бак для жидкости</span>
+                  <span className="font-semibold">50 литров</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Производительность</span>
+                  <span className="font-semibold">до 15 га/час</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Точность навигации</span>
+                  <span className="font-semibold">±10 см RTK</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Применение</span>
+                  <span className="font-semibold">СЗР, удобрения</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-green-100">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Icon name="Camera" className="text-primary" size={24} />
+                  </div>
+                  DJI Matrice 300 RTK
+                </CardTitle>
+                <CardDescription>Дрон для мониторинга и съёмки</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Камера</span>
+                  <span className="font-semibold">Мультиспектральная</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Время полёта</span>
+                  <span className="font-semibold">до 55 минут</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Дальность</span>
+                  <span className="font-semibold">15 км</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-muted-foreground">Применение</span>
+                  <span className="font-semibold">NDVI, картография</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+            <img 
+              src="https://cdn.poehali.dev/projects/1791e283-84b6-474b-8c3f-45cb9d5dbfef/files/72a3cc93-51fb-45a8-a496-a64b3067729e.jpg" 
+              alt="DJI Matrice 300 RTK"
+              className="w-full h-auto object-contain rounded-lg max-h-96"
+            />
           </div>
         </div>
       </section>
