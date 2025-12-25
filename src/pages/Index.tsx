@@ -86,8 +86,12 @@ export default function Index() {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-green-100 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Plane" className="text-primary" size={32} />
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/projects/1791e283-84b6-474b-8c3f-45cb9d5dbfef/files/27085b98-97ac-4cad-ab40-255ca6fc9fd0.jpg" 
+                alt="АэроВектор"
+                className="h-10 w-auto"
+              />
               <span className="text-2xl font-bold text-primary">АэроВектор</span>
             </div>
             <button
@@ -148,6 +152,11 @@ export default function Index() {
       <section id="home" className="py-20 px-4 bg-gradient-to-br from-green-600 to-green-800 text-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
+            <img 
+              src="https://cdn.poehali.dev/projects/1791e283-84b6-474b-8c3f-45cb9d5dbfef/files/27085b98-97ac-4cad-ab40-255ca6fc9fd0.jpg" 
+              alt="АэроВектор"
+              className="h-24 w-auto mx-auto mb-8"
+            />
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Точное земледелие с высоты
             </h1>
